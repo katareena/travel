@@ -1,0 +1,118 @@
+.direction__title {
+  @include text-reset;
+  width: 358px;
+  min-height: 160px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: calc(80 / 55);
+  letter-spacing: -1.245px;
+
+  margin-bottom: 64px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 1px;
+    width: 229px;
+    height: 4px;
+    background-color: $basic;
+  }
+}
+
+.direction__text {
+  @include text-reset;
+  width: 328px;
+  letter-spacing: -0.466667px;
+  color: rgba($dark-2, 0.7);
+  margin-bottom: 6px;
+}
+
+.direction__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-left: -2.45%;
+  margin-right: -2.45%;
+}
+
+.direction__item {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 2.45%; //30px;
+  margin-right: 2.45%; //30px;
+  position: relative;
+  width: 28.43%;
+}
+
+// .direction__box-pic {
+//   width: 100%; //350px;
+//   height: 100%;
+//   max-height: 430px;
+// }
+
+// .direction__img {
+//   width: 100%;
+//   height: 100%;
+// }
+
+.direction__mask {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 21, 23, 0.6);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.direction__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 255px;
+  height: 72px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: 2px;
+  color: $light-1;
+  text-transform: uppercase;
+}
+
+.direction__item:hover .direction__mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.direction__box-text {
+  position: absolute;
+  bottom: 0%;
+  left: 19%;
+  width: 62%;
+  height: 62px;
+  z-index: 10;
+  background-color: $light-1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direction__label {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(24 / 29);
+  letter-spacing: -0.415px;
+}

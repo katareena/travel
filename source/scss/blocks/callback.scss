@@ -1,0 +1,73 @@
+// альтернативное позиционирование
+// .callback {
+//   margin-left: 11px;
+//   min-height: 455px;
+//   // padding-left: 514px;
+//   padding-left: 44%;
+//   padding-top: 70px;
+//   position: relative;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     // width: 844px;
+//     width: 72.9%;
+//     height: 455px;
+//     background-image: url("../img/background-pink.jpg");
+//     background-repeat: no-repeat;
+//     z-index: -1;
+//   }
+// }
+
+.callback {
+  margin-left: 11px;
+  min-height: 455px;
+  padding-left: 44%;
+  padding-top: 70px;
+  position: relative;
+
+  height: 455px;
+  background-image: url("../img/background-pink-desktop@1x.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-pink-desktop@2x.jpg");
+    background-size: contain;
+  }
+}
+
+.callback__form {
+  position: absolute;
+  top: 70px;
+  right: -27px;
+
+  width: 656px;
+  min-height: 315px;
+  background-color: $light-1;
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+  padding: 45px 50px;
+  padding-bottom: 49px;
+  display: flex;
+  flex-direction: column;
+}
+
+.callback__title {
+  @include text-reset;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.callback__text {
+  @include text-reset;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.callback__inner {
+  display: flex;
+  justify-content: space-between;
+}

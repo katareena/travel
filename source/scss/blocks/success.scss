@@ -1,0 +1,19 @@
+.success {
+  width: 728px;
+  min-height: 444px;
+  background-color: $light-2;
+  display: flex;
+  position: relative;
+}
+
+.success__message {
+  @include text-reset;
+  width: 399px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: calc (43 / 25);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}

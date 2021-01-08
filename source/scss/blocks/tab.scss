@@ -1,0 +1,173 @@
+.tab {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1200px;
+  padding-left: 0.7%;
+  padding-right: 3.1%;
+  margin: 0 auto;
+
+  margin-bottom: 240px;
+}
+
+.tab__item {
+  display: none;
+}
+
+.tab__item.active {
+  transition: all 1s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab__inner-1 {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.tab__title {
+  @include text-reset;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: calc(90 / 55);
+  letter-spacing: -1.245px;
+  margin-bottom: 50px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 1px;
+    width: 173px;
+    height: 4px;
+    background-color: $basic;
+  }
+}
+
+.tab__text {
+  @include text-reset;
+  width: 370px;
+  letter-spacing: -0.466667px;
+  margin-right: 30px;
+}
+
+.tab__inner-2 {
+  width: 670px;
+  position: relative;
+}
+
+.tab__img {
+  width: 430px;
+  height: 596px;
+}
+
+.tab__feedback {
+  position: absolute;
+  top: 117px;
+  right: -27px;
+  width: 382px;
+  min-height: 365px;
+  background-color: $light-1;
+  padding: 30px;
+  padding-top: 29px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab__feedback-title {
+  @include text-reset;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: calc(37 / 30);
+  letter-spacing: -0.691667px;
+  color: $dark-2;
+  position: relative;
+  margin-bottom: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 68px;
+    height: 2px;
+    background-color: $basic;
+  }
+}
+
+.tab__feedback-text {
+  @include text-reset;
+  font-size: 14px;
+  line-height: calc(28 / 14);
+  letter-spacing: -0.408333px;
+  color: rgba($dark-2, 0.7);
+}
+
+.tab__feedback-author {
+  height: 38px;
+  line-height: 38px;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-left: 54px;
+  // font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  // line-height: calc(24 / 16);
+  letter-spacing: -1.1px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    background-repeat: no-repeat;
+  }
+}
+
+.tab__feedback-author--1::before {
+  background-image: url("../img/vlada-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/vlada-desktop@2x.png");
+    background-size: contain;
+  }
+}
+
+.tab__feedback-author--2::before {
+  background-image: url("../img/marishka-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/marishka-desktop@2x.png");
+    background-size: contain;
+  }
+}
+
+.tab__feedback-author--3::before {
+  background-image: url("../img/mihail-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/mihail-desktop@2x.png");
+    background-size: contain;
+  }
+}
+
+.tab__feedback-author--4::before {
+  background-image: url("../img/anastasia-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/anastasia-desktop@2x.png");
+    background-size: contain;
+  }
+}
+
+.tab__feedback-author--5::before {
+  background-image: url("../img/vladimir-desktop@1x.png");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/vladimir-desktop@2x.png");
+    background-size: contain;
+  }
+}

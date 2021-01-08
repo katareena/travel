@@ -1,0 +1,93 @@
+.package {
+  width: 370px;
+  min-height: 674px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba($dark-2, 0.3);
+  background-color: $light-1;
+  margin-right: 30px;
+
+  padding-right: 30px;
+  padding-left: 28px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.package__title {
+  @include text-reset;
+  margin-bottom: 35px;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: calc(38 / 28);
+  letter-spacing: -1.27273px;
+  color: rgba($dark-3, 0.7);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.package__text {
+  @include text-reset;
+  width: 289px;
+  margin-bottom: 28px;
+  line-height: calc(24 / 16);
+}
+
+.package:hover {
+  box-shadow: 0 0 0 3px $basic;
+  transition: all 0.2s ease;
+}
+
+.package:hover > .package__title,
+.package:hover > .package__line {
+  color: $basic;
+  transition: all 0.2s ease;
+}
+
+.package:hover > .package__content .package__item .package__tick {
+  color: $dark-3;
+  transition: all 0.2s ease;
+}
+
+.package__line,
+.package__tick {
+  fill: currentColor;
+}
+
+.package__line {
+  margin-bottom: 29px;
+}
+
+.package__content {
+  @include text-reset;
+  list-style: none;
+}
+
+.package__item {
+  display: flex;
+  line-height: calc(32 / 16);
+  margin-bottom: 15px;
+}
+
+.package__item--x {
+  margin-bottom: 9px;
+}
+
+.package__tick {
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  color: $basic;
+}
+
+.package__item p {
+  @include text-reset;
+  line-height: calc(32 / 16);
+}

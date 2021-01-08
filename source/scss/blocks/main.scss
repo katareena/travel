@@ -1,0 +1,47 @@
+.main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main__wrap-1 {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1200px;
+  padding: 0 0.7%; //15px
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.main__wrap-2 {
+  width: 100%;
+  min-width: 900px;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 79px;
+}
+
+.main__background {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1444px;
+  margin: 0 auto;
+  background-image: url("../img/background-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 15px;
+  margin-bottom: 138px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-desktop@2x.jpg");
+  }
+}
+
+.main__wrap-3 {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1200px;
+  padding: 0 0.7%;
+  margin: 0 auto;
+  padding-right: 30px;
+  margin-bottom: 170px;
+}
