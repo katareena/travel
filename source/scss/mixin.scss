@@ -4,7 +4,142 @@
   list-style: none;
 }
 
-@mixin text-reset {
+@mixin button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $light-1;
+  text-align: center;
+  vertical-align: top;
+  background-color: $basic;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-hover;
+    color: $light-1;
+    transition: all 0.2s ease;
+  }
+
+  &:active {
+    background-color: rgba($basic, 0.5);
+  }
+}
+
+@mixin button-submit {
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  width: 176px;
+  height: 50px;
+  padding: 17px 40px;
+  border: none;
+  margin-top: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@mixin button-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    content: "";
+    height: 22px;
+    width: 1px;
+    background: $light-3;
+    transform: rotate(45deg);
+
+    // @media (max-width: $mobile-width) {
+    //   top: -10px;
+    //   right: 0;
+    // }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    content: "";
+    height: 22px;
+    width: 1px;
+    background: $light-3;
+    transform: rotate(-45deg);
+
+    // @media (max-width: $mobile-width) {
+    //   top: -10px;
+    //   right: 0;
+    // }
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before {
+    background: $basic-hover;
+  }
+
+  &:active::after,
+  &:active::before {
+    background: $basic-hover;
+    opacity: 0.5;
+  }
+}
+
+@mixin box-required {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/star.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin message-error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: $basic;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  letter-spacing: 0.1px;
+  position: absolute;
+  top: -15px;
   margin: 0;
   padding: 0;
+}
+
+@mixin input {
+  width: 269px;
+  height: 50px;
+  padding: 15px;
+  padding-left: 26px;
+  border: 1px solid rgba($dark-2, 0.3);
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  letter-spacing: 0.5px;
+
+  &::placeholder {
+    color: $dark-3;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid rgba($dark-2, 0.7);
+  }
 }

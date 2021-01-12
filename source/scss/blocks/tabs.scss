@@ -28,7 +28,6 @@
 }
 
 .tabs__link {
-  @include text-reset;
   font-family: "Montserrat", "Tahoma", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -38,6 +37,8 @@
   background-color: transparent;
   border: 0;
   height: 40px;
+  padding: 0;
+  margin: 0;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
@@ -53,7 +54,8 @@
   color: $basic;
 }
 
-.tabs__link:hover {
+.tabs__link:hover,
+.tabs__link:focus {
   color: $dark-2;
 }
 

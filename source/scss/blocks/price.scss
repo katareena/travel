@@ -19,13 +19,12 @@
   padding-top: 114px;
 }
 
-.price__title {
-  @include text-reset;
-
+.price__box h2 {
   font-weight: 600;
   font-size: 55px;
   line-height: calc(90 / 55);
 
+  margin: 0;
   margin-bottom: 45px;
   position: relative;
 
@@ -40,7 +39,7 @@
   }
 }
 
-.price__promo {
+.price__box p {
   line-height: calc(27 / 16);
   color: rgba($dark-2, 0.7);
   margin-bottom: 60px;

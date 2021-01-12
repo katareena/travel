@@ -4,17 +4,17 @@
   flex-shrink: 1;
 }
 
-.option-title {
-  @include text-reset;
+.option h2 {
   font-weight: 600;
   font-size: 18px;
   line-height: calc(32 / 18);
   color: $dark-3;
+  margin: 0;
   margin-bottom: 20px;
 }
 
-.option-text {
-  @include text-reset;
+.option p {
+  margin: 0;
   font-size: 14px;
   line-height: calc(24 / 14);
   color: rgba($dark-3, 0.5);

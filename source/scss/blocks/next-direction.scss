@@ -3,11 +3,11 @@
 }
 
 .next-direction__title {
-  @include text-reset;
   font-weight: 600;
   font-size: 18px;
   line-height: calc(32 / 18);
   color: $dark-3;
+  margin: 0;
   margin-bottom: 20px;
 }
 

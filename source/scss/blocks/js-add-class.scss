@@ -1,0 +1,15 @@
+.button-disabled {
+  background-color: $footer-border;
+  color: $light-2;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $footer-border;
+    color: $light-2;
+  }
+}
+
+.input-error {
+  border: 1px solid $basic;
+}

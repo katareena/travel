@@ -1,5 +1,4 @@
-.direction__title {
-  @include text-reset;
+.direction h2 {
   width: 358px;
   min-height: 160px;
   font-weight: 600;
@@ -7,6 +6,7 @@
   line-height: calc(80 / 55);
   letter-spacing: -1.245px;
 
+  margin: 0;
   margin-bottom: 64px;
   position: relative;
 
@@ -21,11 +21,11 @@
   }
 }
 
-.direction__text {
-  @include text-reset;
+.direction p {
   width: 328px;
   letter-spacing: -0.466667px;
   color: rgba($dark-2, 0.7);
+  margin: 0;
   margin-bottom: 6px;
 }
 
@@ -87,13 +87,32 @@
   letter-spacing: 2px;
   color: $light-1;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.direction__item:hover .direction__mask {
+// .direction__button:hover,
+// .direction__button:focus {
+//   background-color: rgba(255, 255, 255, 0.6);
+// }
+
+// .direction__button:active {
+//   background-color: rgba(255, 255, 255, 0.3);
+// }
+
+.direction__item:hover .direction__mask,
+.direction__item:focus .direction__mask {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.direction__item:active .direction__mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 21, 23, 0.85);
 }
 
 .direction__box-text {

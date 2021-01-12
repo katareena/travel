@@ -7,7 +7,6 @@
 }
 
 .success__message {
-  @include text-reset;
   width: 399px;
   font-weight: 500;
   font-size: 25px;
@@ -16,4 +15,8 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
+}
+
+.success__close {
+  @include button-close;
 }

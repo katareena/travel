@@ -35,12 +35,14 @@
   color: $dark-4;
 }
 
-.phone__tel:hover {
+.phone__tel:hover,
+.phone__tel:focus {
   color: $dark-4;
   transition: all 0.2s ease;
 }
 
-.phone__tel--price:hover {
+.phone__tel--price:hover,
+.phone__tel--price:focus {
   color: $basic;
   transition: all 0.2s ease;
 }
@@ -50,10 +52,10 @@
   color: rgba($dark-4, 0.2);
 }
 
-.phone__text {
-  @include text-reset;
+.phone p {
   font-weight: 500;
   font-size: 22px;
   line-height: 34px;
+  margin: 0;
   margin-bottom: 13px;
 }

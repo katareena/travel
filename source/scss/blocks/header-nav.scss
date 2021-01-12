@@ -27,7 +27,8 @@
   color: $dark-3;
 }
 
-.header-nav__link:hover {
+.header-nav__link:hover,
+.header-nav__link:focus {
   color: $basic;
   transition: all 0.2s ease;
 }

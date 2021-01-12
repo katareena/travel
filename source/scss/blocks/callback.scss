@@ -54,15 +54,13 @@
   flex-direction: column;
 }
 
-.callback__title {
-  @include text-reset;
+.callback h2 {
   letter-spacing: 0.5px;
   margin: 0 auto;
   margin-bottom: 5px;
 }
 
-.callback__text {
-  @include text-reset;
+.callback p {
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -70,4 +68,25 @@
 .callback__inner {
   display: flex;
   justify-content: space-between;
+}
+
+.callback__box {
+  position: relative;
+}
+
+.callback__box--required {
+  @include box-required;
+}
+
+.callback__box p {
+  @include message-error;
+}
+
+.callback__box input {
+  @include input;
+}
+
+.callback__btn {
+  @include button;
+  @include button-submit;
 }

@@ -17,7 +17,7 @@
 }
 
 .package__title {
-  @include text-reset;
+  margin: 0;
   margin-bottom: 35px;
 
   font-weight: 600;
@@ -31,9 +31,9 @@
   align-items: center;
 }
 
-.package__text {
-  @include text-reset;
+.package p {
   width: 289px;
+  margin: 0;
   margin-bottom: 28px;
   line-height: calc(24 / 16);
 }
@@ -64,7 +64,7 @@
 }
 
 .package__content {
-  @include text-reset;
+  @include list-reset;
   list-style: none;
 }
 
@@ -88,6 +88,16 @@
 }
 
 .package__item p {
-  @include text-reset;
+  margin: 0;
   line-height: calc(32 / 16);
+}
+
+.package__btn {
+  width: 310px;
+  height: 75px;
+  padding: 30px 68px;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  @include button;
 }

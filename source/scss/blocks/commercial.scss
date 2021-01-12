@@ -24,8 +24,8 @@
   right: 22.5%;
 }
 
-.commercial__title {
-  @include text-reset;
+.commercial h1 {
+  margin: 0;
   margin-bottom: 28px;
   font-weight: 600;
   font-size: 55px;
@@ -34,9 +34,9 @@
   color: $light-1;
 }
 
-.commercial__message {
-  @include text-reset;
+.commercial p {
   width: 376px;
+  margin: 0;
   margin-bottom: 35px;
   line-height: calc(27 / 16);
   letter-spacing: -0.466667px;
@@ -58,4 +58,13 @@
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
   }
+}
+
+.commercial__btn {
+  width: 340px;
+  height: 75px;
+  padding: 30px 39px;
+  padding-right: 178px;
+
+  @include button;
 }

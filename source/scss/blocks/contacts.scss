@@ -5,12 +5,12 @@
   padding-left: 7.5%; //90px
 }
 
-.contacts__title {
-  @include text-reset;
+.contacts h2 {
   font-weight: 600;
   font-size: 18px;
   line-height: calc(32 / 18);
   color: $dark-3;
+  margin: 0;
   margin-bottom: 22px;
 }
 
@@ -62,7 +62,9 @@
 
 
 .contacts__mail:hover,
-.contacts__tel:hover {
+.contacts__mail:focus,
+.contacts__tel:hover,
+.contacts__tel:focus {
   color: $dark-2;
   transition: all 0.2s ease;
 }

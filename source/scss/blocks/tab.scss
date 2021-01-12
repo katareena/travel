@@ -24,12 +24,12 @@
   padding-top: 10px;
 }
 
-.tab__title {
-  @include text-reset;
+.tab__inner-1 h2 {
   font-weight: 600;
   font-size: 55px;
   line-height: calc(90 / 55);
   letter-spacing: -1.245px;
+  margin: 0;
   margin-bottom: 50px;
   position: relative;
 
@@ -44,11 +44,20 @@
   }
 }
 
-.tab__text {
-  @include text-reset;
+.tab__inner-1 p {
   width: 370px;
   letter-spacing: -0.466667px;
+  margin: 0;
   margin-right: 30px;
+}
+
+.tab__btn {
+  width: 250px;
+  height: 75px;
+  padding: 30px 39px;
+  margin-top: 50px;
+
+  @include button;
 }
 
 .tab__inner-2 {
@@ -74,14 +83,14 @@
   flex-direction: column;
 }
 
-.tab__feedback-title {
-  @include text-reset;
+.tab__feedback h3 {
   font-weight: 500;
   font-size: 30px;
   line-height: calc(37 / 30);
   letter-spacing: -0.691667px;
   color: $dark-2;
   position: relative;
+  margin: 0;
   margin-bottom: 32px;
 
   &::before {
@@ -96,7 +105,7 @@
 }
 
 .tab__feedback-text {
-  @include text-reset;
+  margin: 0;
   font-size: 14px;
   line-height: calc(28 / 14);
   letter-spacing: -0.408333px;
@@ -109,10 +118,8 @@
   margin-top: auto;
   margin-bottom: 0;
   padding-left: 54px;
-  // font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  // line-height: calc(24 / 16);
   letter-spacing: -1.1px;
   position: relative;
 
