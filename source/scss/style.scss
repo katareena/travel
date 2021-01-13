@@ -3,7 +3,6 @@
 @import "variables.scss";
 @import "scaffold.scss";
 @import "mixin.scss";
-@import "blocks/js-add-class.scss";
 @import "blocks/header.scss";
 @import "blocks/header-nav.scss";
 @import "blocks/phone.scss";
@@ -20,4 +19,5 @@
 @import "blocks/contacts.scss";
 @import "blocks/option.scss";
 @import "blocks/modal.scss";
-// @import "blocks/success.scss";
+@import "blocks/success.scss";
+@import "blocks/js-add-class.scss";

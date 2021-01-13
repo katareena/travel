@@ -38,18 +38,6 @@
   };
 
   function validatePhoneInputsHandler() {
-    if (this.value === '') {
-      this.classList.add('input-error');
-      error_message(phoneMessage, 'Это поле обязательно для заполнения');
-    } else if (this.value.length < 17) {
-      this.classList.add('input-error');
-      error_message(phoneMessage, 'Телефон должен содержать 11 цифр');
-      submitBtns.forEach(function (button) {
-        button.disabled = true;
-        button.classList.add('button-disabled');
-      });
-    }
-
     if (!this.value === '' || this.value.length >= 17) {
       this.classList.remove('input-error');
       error_message(phoneMessage, '');
@@ -57,35 +45,24 @@
         button.disabled = false;
         button.classList.remove('button-disabled');
       });
+    } else {
+      this.classList.add('input-error');
+      error_message(phoneMessage, 'Введите 10 цифр номера телефона');
+      submitBtns.forEach(function (button) {
+        button.disabled = true;
+        button.classList.add('button-disabled');
+      });
     }
-
-
-
-    // else {
-    //   this.classList.remove('input-error');
-    //   error_message(phoneMessage, '');
-    //   submitBtns.forEach(function (button) {
-    //     button.disabled = false;
-    //     button.classList.remove('button-disabled');
-    //   });
-    // }
   };
 
   function validateMailInputsHandler() {
-    if (!this.value.includes('@') || !this.value.includes('.')) {
-      this.classList.add('input-error');
-      error_message(mailMessage, 'Неверный e-mail');
-    }
-
     if (this.value.includes('@') && this.value.includes('.') || this.value === '') {
       this.classList.remove('input-error');
       error_message(mailMessage, '');
+    } else {
+      this.classList.add('input-error');
+      error_message(mailMessage, 'Введите верный e-mail');
     }
-
-    // else {
-    //   this.classList.remove('input-error');
-    //   error_message(mailMessage, '');
-    // }
   };
 
   phoneInputs.forEach(function(el) {

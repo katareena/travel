@@ -3,50 +3,83 @@
   var ESCAPE = 'Escape';
   var links = document.querySelectorAll('.button-buy-js');
   var popup = document.querySelector('.modal');
-  var message = document.querySelector('.field-text__error');
   var close = document.querySelector('.modal__close');
   var form = popup.querySelector('form');
   var phone = popup.querySelector('[name=telephone]');
+  var message = document.querySelector('.success');
+  var closeMessage = message.querySelector('.success__close');
 
-  function openClickHandler () {
+  function openModalHandler (evt) {
+    evt.preventDefault();
     popup.classList.add('modal--show');
     phone.focus();
-    close.addEventListener('click', closeClickHandler);
-    window.addEventListener('keydown',closeEscHandler);
+    document.body.style.overflow = 'hidden';
+    close.addEventListener('click', closeModalHandler);
+    window.addEventListener('keydown',closeModalEscHandler);
+    popup.addEventListener('click', closeModalOverlayHandler);
+    form.addEventListener('submit', submitHandler);
   };
 
-  function closeClickHandler () {
+  function closeModalHandler () {
     if (popup.classList.contains('modal--show')) {
       popup.classList.remove('modal--show');
-      message.classList.remove('field-text__error--show');
       form.reset();
-      close.removeEventListener('click', closeClickHandler);
-      window.removeEventListener('keydown', closeEscHandler);
+      document.body.style.overflow = '';
+      close.removeEventListener('click', closeModalHandler);
+      window.removeEventListener('keydown', closeModalEscHandler);
+      popup.removeEventListener('click', closeModalOverlayHandler);
+      form.removeEventListener('submit', submitHandler);
     }
   };
 
-  function closeEscHandler (evt) {
+  function closeModalEscHandler (evt) {
     if (evt.key === ESCAPE) {
-      closeClickHandler();
+      closeModalHandler();
+    }
+  };
+
+  function closeModalOverlayHandler (evt) {
+    if (!evt.target.matches('.modal__form, .modal__form *')) {
+      closeModalHandler();
     }
   };
 
   links.forEach(function(el) {
-    el.addEventListener('click', openClickHandler);
+    el.addEventListener('click', openModalHandler);
   });
 
-  // если обработчик не нужно удалять, он записывается:
 
-  // links.forEach(function(el) {
-  //   el.addEventListener('click', function() {
-  //     openClickHandler();
-  //   });
+  function closeMessageHandler () {
+    if (message.classList.contains('success--show')) {
+      message.classList.remove('success--show');
+      closeModalHandler ();
 
-  //   el.addEventListener('keydown', function() {
-  //     if (evt.key === ENTER) {
-  //       openClickHandler();
-  //     }
-  //   });
-  // });
+      message.removeEventListener('click', closeMessageOverlayHandler);
+      closeMessage.removeEventListener('click', closeMessageHandler);
+      window.removeEventListener('keydown', closeMessageEscHandler);
+    }
+  };
+
+  function closeMessageEscHandler (evt) {
+    if (evt.key === ESCAPE) {
+      closeMessageHandler();
+    }
+  };
+
+  function closeMessageOverlayHandler (evt) {
+    if (!evt.target.matches('.success__box, .success__box *')) {
+      closeMessageHandler();
+    }
+  };
+
+  function submitHandler (evt) {
+    evt.preventDefault();
+    message.classList.add('success--show');
+    document.body.style.overflow = 'hidden';
+
+    message.addEventListener('click', closeMessageOverlayHandler);
+    closeMessage.addEventListener('click', closeMessageHandler);
+    window.addEventListener('keydown', closeMessageEscHandler);
+  };
 
 })();

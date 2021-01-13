@@ -1,6 +1,7 @@
 .button-disabled {
   background-color: $footer-border;
   color: $light-2;
+  cursor: auto;
 
   &:hover,
   &:focus,
