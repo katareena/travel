@@ -68,6 +68,7 @@
   top: 0;
   left: 0;
   z-index: 10;
+  cursor: pointer;
 }
 
 .direction__button {
@@ -87,17 +88,7 @@
   letter-spacing: 2px;
   color: $light-1;
   text-transform: uppercase;
-  cursor: pointer;
 }
-
-// .direction__button:hover,
-// .direction__button:focus {
-//   background-color: rgba(255, 255, 255, 0.6);
-// }
-
-// .direction__button:active {
-//   background-color: rgba(255, 255, 255, 0.3);
-// }
 
 .direction__item:hover .direction__mask,
 .direction__item:focus .direction__mask {

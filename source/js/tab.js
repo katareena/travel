@@ -1,46 +1,47 @@
 'use strict';
 (function () {
   var ENTER = 'Enter';
-  var tabLinks = document.querySelectorAll('.tab-link-js');
-  var tabContent = document.querySelectorAll('.tab__item');
+  var tabsLink = document.querySelectorAll('.tab-link-js');
+  var tabsContent = document.querySelectorAll('.tab__item');
   var directions = document.querySelectorAll('.direction__item');
-
-  function openTabs(el) {
-    var btnTarget = el.currentTarget;
-    var country = btnTarget.dataset.country;
-
-    tabContent.forEach(function(el) {
-      el.classList.remove('active');
-    });
-
-    tabLinks.forEach(function(el) {
-      el.classList.remove('active');
-    });
-
-    document.querySelector('#' + country).classList.add('active');
-    btnTarget.classList.add('active');
-  };
+  var tabList = document.querySelector('#tabs');
 
   function openDetail() {
     var btn = document.activeElement;
     var country = btn.dataset.country;
 
-    tabContent.forEach(function(el) {
+    tabsContent.forEach(function(el) {
       el.classList.remove('active');
     });
 
+    tabsLink.forEach(function(el) {
+      if (el.dataset.country === country) {
+      el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+
     document.querySelector('#' + country).classList.add('active');
-    document.querySelector('#' + country).scrollIntoView();
+    tabList.scrollIntoView();
   };
 
-  tabLinks.forEach(function(el) {
-    el.addEventListener('click', openTabs);
+  tabsLink.forEach(function(el) {
+    el.addEventListener('click', function() {
+      openDetail();
+    });
   });
 
   directions.forEach(function(el) {
+    el.addEventListener('click', function() {
+      openDetail();
+      el.blur();
+    });
+
     el.addEventListener('keydown', function(evt) {
       if (evt.key === ENTER) {
         openDetail();
+        el.blur();
       }
     });
   });
