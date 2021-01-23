@@ -15,6 +15,36 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/commercial-desktop@2x.jpg");
   }
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    min-height: 344px;
+    padding-top: 60px;
+    background-image: url("../img/commercial-tablet@1x.jpg");
+    margin-bottom: 80px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/commercial-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+
+    min-height: 485px;
+    padding-top: 81px;
+    background-image: url("../img/commercial-mobile@1x.jpg");
+    background-color: transparent;
+    background-size: 100% 235px;
+    background-position: center top;
+    margin-bottom: 53px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/commercial-mobile@2x.jpg");
+    }
+  }
 }
 
 .commercial__inner {
@@ -22,6 +52,19 @@
   position: absolute;
   top: 185px;
   right: 22.5%;
+
+  @media (max-width: $tablet-width) {
+    width: 400px;
+    position: static;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 294px;
+  }
 }
 
 .commercial h1 {
@@ -32,6 +75,17 @@
   line-height: calc(80 / 55);
   letter-spacing: -1.10667px;
   color: $light-1;
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: calc(45 / 30);
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 102px;
+  }
 }
 
 .commercial p {
@@ -41,12 +95,26 @@
   line-height: calc(27 / 16);
   letter-spacing: -0.466667px;
   color: $light-1;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: inherit;
+    color: $dark-2;
+  }
 }
 
-.commercial__box {
+.commercial__btn {
   width: 340px;
   height: 75px;
+  padding: 30px 39px;
+  padding-right: 178px;
   position: relative;
+
+  @include button;
 
   &::before {
     content: "";
@@ -58,13 +126,15 @@
     background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
   }
-}
 
-.commercial__btn {
-  width: 340px;
-  height: 75px;
-  padding: 30px 39px;
-  padding-right: 178px;
+  @media (max-width: $tablet-width) {
+    width: 250px;
+    height: 50px;
+    padding: 19px 40px;
+    padding-right: 90px;
 
-  @include button;
+    &::before {
+      top: 17px;
+    }
+  }
 }

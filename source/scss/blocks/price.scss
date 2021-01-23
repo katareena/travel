@@ -7,16 +7,45 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+    // margin-bottom: 112px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+  }
 }
 
 .price__inner {
   display: flex;
+
+  @media (max-width: $tablet-width) {
+    order: 2;
+    margin-left: 71px;
+    margin-right: 71px;
+  }
 }
 
 .price__box {
   width: 300px;
   padding-left: 5px;
   padding-top: 114px;
+
+  @media (max-width: $tablet-width) {
+    order: 1;
+    width: auto;
+    padding-left: 0;
+    padding-top: 0;
+    margin-left: 21px;
+    margin-right: 21px;
+  }
 }
 
 .price__box h2 {
@@ -37,10 +66,96 @@
     height: 3px;
     background-color: $basic;
   }
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: calc(45 / 30);
+    margin-bottom: 20px;
+    text-align: center;
+
+    &::before {
+      display: none;
+      position: static;
+    }
+  }
 }
 
-.price__box p {
+.price__box > p {
   line-height: calc(27 / 16);
   color: rgba($dark-2, 0.7);
+  margin-top: 0;
   margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.price__phone {
+  margin-top: 3px;
+  padding-left: 45px;
+  margin-left: 0;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.price__phone p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  margin: 0;
+  margin-bottom: 13px;
+  color: $dark-3;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.price__tel {
+  font-size: 20px;
+  line-height: calc(32 / 18);
+  text-decoration-line: underline;
+  color: $dark-4;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -39px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/phone-icon-2.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    position: static;
+    color: $basic;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.price__tel:hover,
+.price__tel:focus {
+  color: $basic;
+  transition: all 0.2s ease;
+}
+
+.price__tel:active {
+  color: rgba($dark-4, 0.2);
 }

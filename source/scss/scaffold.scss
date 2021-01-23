@@ -14,12 +14,9 @@ body {
   font-size: 16px;
   line-height: calc(28 / 16);
   color: $dark-2;
-
   background-color: $light-1;
-
-  min-width: 1024px;
+  width: 100%;
   min-height: 100%;
-
   margin: 0;
 }
 
@@ -47,6 +44,9 @@ a {
   text-decoration: none;
 }
 
-// a:focus {
-//   color: $dark-4;
-// }
+//для ie11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  label {
+    display: none;
+  }
+}

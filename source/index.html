@@ -18,10 +18,12 @@
       <div class="header__inner">
 
         <a class="header__logo">
-          <img class="header__logo-img" src="img/logo.svg" width="57" height="22" alt="Логотип компании «Путешествие по Европе»"/>
+          <img class="header__logo-img" src="img/logo-desktop.svg" width="57" height="22" alt="Логотип компании «Путешествие по Европе»"/>
         </a>
 
-        <nav class="header-nav">
+        <button class="header__burger header__burger--hidden" type="button" aria-label="Кнопка открытия меню"></button>
+
+        <nav class="header-nav header-nav--open">
           <ul  class="header-nav__list ">
             <li class="header-nav__item">
               <a class="header-nav__link header-nav__link--visitedIndex" href="#direction">О путешествии</a>
@@ -45,7 +47,7 @@
         <div class="commercial__inner">
           <h1>Путешествие по Европе</h1>
           <p>В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-          <div class="commercial__box"><a class="commercial__btn" href="#tabs">Смотреть тур</a></div>
+          <a class="commercial__btn" href="#tabs">Смотреть тур</a>
         </div>
       </section>
 
@@ -61,7 +63,10 @@
               <h3 class="visually-hidden">Место Вашего путешествия</h3>
               <div class="direction__box-pic">
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/Mask_Group-4-tablet@1x.webp 1x, img/Mask_Group-4-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/Mask_Group-4-desktop@1x.webp 1x, img/Mask_Group-4-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/Mask_Group-4-tablet@1x.jpg 1x, img/Mask_Group-4-tablet@2x.jpg 2x"/>
                   <!-- 1х: 350px; 2x: 430px -->
                   <img class="direction__img" src="img/Mask_Group-4-desktop@1x.jpg" srcset="img/Mask_Group-4-desktop@2x.jpg 2x" loading="lazy" width="350" height="430" alt="Пейзажи Греции">
                 </picture>
@@ -78,7 +83,10 @@
               <h3 class="visually-hidden">Место Вашего путешествия</h3>
               <div class="direction__box-pic">
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/Mask_Group-tablet@1x.webp 1x, img/Mask_Group-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/Mask_Group-desktop@1x.webp 1x, img/Mask_Group-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/Mask_Group-tablet@1x.jpg 1x, img/Mask_Group-tablet@2x.jpg 2x"/>
                   <!-- 1х: 350px; 2x: 430px -->
                   <img class="direction__img" src="img/Mask_Group-desktop@1x.jpg" srcset="img/Mask_Group-desktop@2x.jpg 2x" loading="lazy" width="350" height="430" alt="Пейзажи Албании">
                 </picture>
@@ -95,7 +103,10 @@
               <h3 class="visually-hidden">Место Вашего путешествия</h3>
               <div class="direction__box-pic">
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/Mask_Group-1-tablet@1x.webp 1x, img/Mask_Group-1-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/Mask_Group-1-desktop@1x.webp 1x, img/Mask_Group-1-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/Mask_Group-1-tablet@1x.jpg 1x, img/Mask_Group-1-tablet@2x.jpg 2x"/>
                   <!-- 1х: 350px; 2x: 430px -->
                   <img class="direction__img" src="img/Mask_Group-1-desktop@1x.jpg" srcset="img/Mask_Group-1-desktop@2x.jpg 2x" loading="lazy" width="350" height="430" alt="Пейзажи Македонии">
                 </picture>
@@ -112,7 +123,10 @@
               <h3 class="visually-hidden">Место Вашего путешествия</h3>
               <div class="direction__box-pic">
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/Mask_Group-2-tablet@1x.webp 1x, img/Mask_Group-2-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/Mask_Group-2-desktop@1x.webp 1x, img/Mask_Group-2-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/Mask_Group-2-tablet@1x.jpg 1x, img/Mask_Group-2-tablet@2x.jpg 2x"/>
                   <!-- 1х: 350px; 2x: 430px -->
                   <img class="direction__img" src="img/Mask_Group-2-desktop@1x.jpg" srcset="img/Mask_Group-2-desktop@2x.jpg 2x" loading="lazy" width="350" height="430" alt="Пейзажи Черногории">
                 </picture>
@@ -129,7 +143,10 @@
               <h3 class="visually-hidden">Место Вашего путешествия</h3>
               <div class="direction__box-pic">
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/Mask_Group-3-tablet@1x.webp 1x, img/Mask_Group-3-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/Mask_Group-3-desktop@1x.webp 1x, img/Mask_Group-3-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/Mask_Group-3-tablet@1x.jpg 1x, img/Mask_Group-3-tablet@2x.jpg 2x"/>
                   <!-- 1х: 350px; 2x: 430px -->
                   <img class="direction__img" src="img/Mask_Group-3-desktop@1x.jpg" srcset="img/Mask_Group-3-desktop@2x.jpg 2x" loading="lazy" width="350" height="430" alt="Пейзажи Хорватии">
                 </picture>
@@ -169,11 +186,14 @@
             </div>
 
             <div class="tab__inner-2">
-              <div class="tab__img">
+              <div>
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet@1x.webp 1x, img/greece-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/greece-desktop@1x.webp 1x, img/greece-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/greece-tablet@1x.jpg 1x, img/greece-tablet@2x.jpg 2x"/>
                   <!-- 1х: 430px; 2x: 596px -->
-                  <img src="img/greece-desktop@1x.jpg" srcset="img/greece-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Греции">
+                  <img class="tab__img" src="img/greece-desktop@1x.jpg" srcset="img/greece-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Греции">
                 </picture>
               </div>
               <div class="tab__feedback">
@@ -193,11 +213,14 @@
             </div>
 
             <div class="tab__inner-2">
-              <div class="tab__img">
+              <div>
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/albany-tablet@1x.webp 1x, img/albany-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/albany-desktop@1x.webp 1x, img/albany-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/albany-tablet@1x.jpg 1x, img/albany-tablet@2x.jpg 2x"/>
                   <!-- 1х: 430px; 2x: 596px -->
-                  <img src="img/albany-desktop@1x.jpg" srcset="img/albany-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Албании">
+                  <img class="tab__img" src="img/albany-desktop@1x.jpg" srcset="img/albany-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Албании">
                 </picture>
               </div>
               <div class="tab__feedback">
@@ -216,11 +239,14 @@
             </div>
 
             <div class="tab__inner-2">
-              <div class="tab__img">
+              <div>
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/makedony-tablet@1x.webp 1x, img/makedony-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/makedony-desktop@1x.webp 1x, img/makedony-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/makedony-tablet@1x.jpg 1x, img/makedony-tablet@2x.jpg 2x"/>
                   <!-- 1х: 430px; 2x: 596px -->
-                  <img src="img/makedony-desktop@1x.jpg" srcset="img/makedony-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Македонии">
+                  <img class="tab__img" src="img/makedony-desktop@1x.jpg" srcset="img/makedony-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Македонии">
                 </picture>
               </div>
               <div class="tab__feedback">
@@ -239,11 +265,14 @@
             </div>
 
             <div class="tab__inner-2">
-              <div class="tab__img">
+              <div>
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegrin-tablet@1x.webp 1x, img/montenegrin-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/montenegrin-desktop@1x.webp 1x, img/montenegrin-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/montenegrin-tablet@1x.jpg 1x, img/montenegrin-tablet@2x.jpg 2x"/>
                   <!-- 1х: 430px; 2x: 596px -->
-                  <img src="img/montenegrin-desktop@1x.jpg" srcset="img/montenegrin-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Черногории">
+                  <img class="tab__img" src="img/montenegrin-desktop@1x.jpg" srcset="img/montenegrin-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Черногории">
                 </picture>
               </div>
               <div class="tab__feedback">
@@ -262,11 +291,14 @@
             </div>
 
             <div class="tab__inner-2">
-              <div class="tab__img">
+              <div>
                 <picture>
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/сroatia-tablet@1x.webp 1x, img/сroatia-tablet@2x.webp 2x"/>
                   <source type="image/webp" srcset="img/сroatia-desktop@1x.webp 1x, img/сroatia-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1023px)" srcset="img/сroatia-tablet@1x.jpg 1x, img/сroatia-tablet@2x.jpg 2x"/>
                   <!-- 1х: 430px; 2x: 596px -->
-                  <img src="img/сroatia-desktop@1x.jpg" srcset="img/сroatia-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Хорватия">
+                  <img class="tab__img" src="img/сroatia-desktop@1x.jpg" srcset="img/сroatia-desktop@2x.jpg 2x" loading="lazy" width="430" height="596" alt="Пейзажи Хорватия">
                 </picture>
               </div>
               <div class="tab__feedback">
@@ -368,9 +400,9 @@
           <article class="price__box">
             <h2>Цены</h2>
             <p>Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
-            <div class="phone phone--price">
+            <div class="price__phone">
               <p>Свяжитесь с нами</p>
-              <a class="phone__tel phone__tel--price" href="tel:849978468446">+7 (499) -784-684-46</a>
+              <a class="price__tel" href="tel:849978468446">+7 (499) -784-684-46</a>
             </div>
           </article>
 

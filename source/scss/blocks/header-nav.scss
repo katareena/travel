@@ -14,10 +14,71 @@
 .header-nav {
   margin-right: 12px;
   margin-top: 3px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
+
+.header-nav--open {
+  @media (max-width: $tablet-width) {
+    // display: block;
+    width: 100%;
+    height: 568px;
+    background-color: $light-1;
+    min-width: 768px;
+    max-width: 1023px;
+    padding: 0;
+    padding-top: 98px;
+    padding-bottom: 108px;
+    // position: relative;
+    // margin-top: -50px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    position: absolute;
+    margin-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+  }
+}
+
+.header-nav__list {
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // @include list-reset;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 
 .header-nav__item:not(:last-child) {
   margin-right: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.header-nav__item {
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: 60px;
+    background-color: $light-2;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-nav__link {

@@ -2,11 +2,10 @@
   margin-left: 57px;
   padding-left: 36px;
   margin-top: 3px;
-}
 
-.phone--price {
-  padding-left: 45px;
-  margin-left: 0;
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .phone__tel {
@@ -29,25 +28,12 @@
   }
 }
 
-.phone__tel--price {
-  font-size: 20px;
-  text-decoration-line: underline;
-  color: $dark-4;
-}
-
 .phone__tel:hover,
 .phone__tel:focus {
   color: $dark-4;
   transition: all 0.2s ease;
 }
 
-.phone__tel--price:hover,
-.phone__tel--price:focus {
-  color: $basic;
-  transition: all 0.2s ease;
-}
-
-.phone__tel--price:active,
 .phone__tel:active {
   color: rgba($dark-4, 0.2);
 }
