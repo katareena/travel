@@ -6,4 +6,35 @@
   padding-left: 27px;
   display: flex;
   margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    flex-direction: column;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+    padding-left: 11px;
+    padding-right: 11px;
+    text-align: center;
+  }
+}
+
+.footer__inner {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $footer-border;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }

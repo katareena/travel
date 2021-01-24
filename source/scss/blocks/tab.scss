@@ -95,10 +95,6 @@
     margin-bottom: 20px;
     text-align: center;
   }
-
-  // @media (max-width: $mobile-width) {
-
-  // }
 }
 
 .tab__btn {
@@ -118,6 +114,7 @@
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   @media (max-width: $mobile-width) {
@@ -155,10 +152,10 @@
 
 .tab__feedback {
   position: absolute;
-  top: 117px;
-  right: -27px;
   width: 382px;
   min-height: 365px;
+  top: 117px;
+  right: -27px;
   background-color: $light-1;
   padding: 30px;
   padding-top: 29px;
@@ -166,9 +163,17 @@
   flex-direction: column;
 
   @media (max-width: $tablet-width) {
+    min-height: 367px;
     top: 80px;
     right: calc(50% - 191px);
-    min-height: 367px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 268px;
+    min-height: 431px;
+    right: calc(50% - 134px);
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -191,6 +196,17 @@
     height: 2px;
     background-color: $basic;
   }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    text-align: center;
+
+    &::before {
+      left: 80px;
+      height: 1px;
+    }
+  }
 }
 
 .tab__feedback-text {
@@ -199,6 +215,10 @@
   line-height: calc(28 / 14);
   letter-spacing: -0.408333px;
   color: rgba($dark-2, 0.7);
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
 }
 
 .tab__feedback-author {
@@ -220,6 +240,19 @@
     width: 38px;
     height: 38px;
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 72px;
+    padding-left: 0;
+    padding-top: 48px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      top: 0;
+      left: calc(50% - 17px);
+    }
   }
 }
 

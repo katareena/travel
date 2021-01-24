@@ -14,7 +14,6 @@
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
-    // margin-bottom: 112px;
   }
 
   @media (max-width: $mobile-width) {
@@ -28,8 +27,23 @@
 
   @media (max-width: $tablet-width) {
     order: 2;
-    margin-left: 71px;
-    margin-right: 71px;
+
+    width: 100%;
+    min-width: 626px;
+    max-width: 810px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -154,6 +168,10 @@
 .price__tel:focus {
   color: $basic;
   transition: all 0.2s ease;
+
+  @media (max-width: $tablet-width) {
+    color: $dark-4;
+  }
 }
 
 .price__tel:active {

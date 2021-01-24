@@ -3,6 +3,15 @@
   border-right: 1px solid $footer-border;
   border-left: 1px solid $footer-border;
   padding-left: 7.5%; //90px
+
+  @media (max-width: $tablet-width) {
+    border-right: none;
+    width: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    border-left: none;
+  }
 }
 
 .contacts h2 {

@@ -71,6 +71,7 @@
     min-width: 768px;
     max-width: 1023px;
     background-image: none;
+    margin-bottom: 125px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: none;
@@ -80,25 +81,6 @@
   @media (max-width: $mobile-width) {
     min-width: 320px;
     max-width: 767px;
-  }
-}
-
-.main__wrap-3 {
-  width: 100%;
-  min-width: 1024px;
-  max-width: 1200px;
-  padding: 0 0.7%;
-  margin: 0 auto;
-  padding-right: 30px;
-  margin-bottom: 170px;
-
-  @media (max-width: $tablet-width) {
-    min-width: 768px;
-    max-width: 1023px;
-  }
-
-  @media (max-width: $mobile-width) {
-    min-width: 320px;
-    max-width: 767px;
+    margin-bottom: 50px;
   }
 }

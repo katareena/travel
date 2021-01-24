@@ -2,6 +2,13 @@
   width: 370px;
   padding-left: 49px;
   flex-shrink: 1;
+
+  @media (max-width: $tablet-width) {
+    width: 667px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
 .option h2 {
