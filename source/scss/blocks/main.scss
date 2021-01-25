@@ -13,45 +13,6 @@
   }
 }
 
-.main__wrap-1 {
-  width: 100%;
-  min-width: 1024px;
-  max-width: 1200px;
-  padding: 0 0.7%; //15px
-  margin: 0 auto;
-  margin-bottom: 40px;
-
-  @media (max-width: $tablet-width) {
-    min-width: 768px;
-    max-width: 1023px;
-    margin-bottom: 48px;
-  }
-
-  @media (max-width: $mobile-width) {
-    min-width: 320px;
-    max-width: 767px;
-  }
-}
-
-.main__wrap-2 {
-  width: 100%;
-  min-width: 900px;
-  max-width: 1170px;
-  margin: 0 auto;
-  margin-bottom: 79px;
-
-  @media (max-width: $tablet-width) {
-    min-width: 768px;
-    max-width: 1023px;
-    margin-bottom: 33px;
-  }
-
-  @media (max-width: $mobile-width) {
-    min-width: 320px;
-    max-width: 767px;
-  }
-}
-
 .main__background {
   width: 100%;
   min-width: 1024px;

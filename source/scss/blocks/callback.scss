@@ -12,7 +12,7 @@
 
   height: 455px;
   background-image: url("../img/background-pink-desktop@1x.jpg");
-  background-position: 11px;
+  background-position: 14px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -51,7 +51,7 @@
 .callback__form {
   position: absolute;
   top: 70px;
-  right: -27px;
+  right: -19px;
 
   margin-right: 40px;
   width: 656px;
@@ -63,6 +63,7 @@
   padding-bottom: 49px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   @media (max-width: $tablet-width) {
     position: static;

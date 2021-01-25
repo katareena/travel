@@ -3,7 +3,8 @@
   min-width: 1024px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   margin-bottom: 50px;
 
@@ -26,6 +27,9 @@
 
 .footer__inner {
   display: flex;
+  width: 100%;
+  min-width: 600px;
+  max-width: 779px;
 
   @media (max-width: $tablet-width) {
     margin: 0 auto;
@@ -35,6 +39,8 @@
   }
 
   @media (max-width: $mobile-width) {
+    min-width: 270px;
+    max-width: 440px;
     flex-direction: column;
   }
 }

@@ -1,9 +1,29 @@
 .tabs {
   width: 100%;
   min-width: 900px;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 79px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    margin-bottom: 33px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+  }
+}
+
+.tabs__inner {
+  width: 100%;
+  min-width: 900px;
   max-width: 900px;
   border-bottom: 2px solid rgba($dark-2, 0.3);
-  margin-left: 15px;
+  margin-left: 20px;
+  margin-bottom: 79px;
 
   display: flex;
   flex-wrap: wrap;

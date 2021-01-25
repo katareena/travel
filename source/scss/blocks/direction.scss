@@ -1,3 +1,24 @@
+.direction {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+  }
+}
+
 .direction h2 {
   width: 358px;
   min-height: 160px;

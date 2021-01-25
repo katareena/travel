@@ -9,6 +9,14 @@
     text-align: center;
     padding-left: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    min-width: 270px;
+    max-width: 440px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .option h2 {
