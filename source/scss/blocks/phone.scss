@@ -13,8 +13,11 @@
   line-height: calc(32 / 18);
   text-decoration-line: underline;
   color: $basic;
-
   position: relative;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.78;
+  }
 
   &::before {
     content: "";

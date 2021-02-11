@@ -17,11 +17,19 @@
   display: inline-block;
   cursor: pointer;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.68;
+  }
+
   @media (max-width: $tablet-width) {
     font-weight: 500;
     font-size: 10px;
     line-height: calc(12 / 10);
     text-align: center;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      line-height: 1.2;
+    }
   }
 
   &:hover,
@@ -47,7 +55,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 
 @mixin button-close {
   cursor: pointer;

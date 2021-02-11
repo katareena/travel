@@ -7,9 +7,9 @@
 
   @media (max-width: $tablet-width) {
     min-width: 768px;
-    max-width: 1023px;
+    max-width: 899px;
     margin-bottom: 33px;
-    background-color: cyan;
+    overflow-x: scroll;
   }
 
   @media (max-width: $mobile-width) {
@@ -30,11 +30,6 @@
 
   @media (max-width: $tablet-width) {
     flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-
-  @media (max-width: $mobile-width) {
-    overflow-x: scroll;
   }
 }
 
@@ -54,13 +49,19 @@
   text-align: center;
   cursor: pointer;
 
-  @media (max-width: $tablet-width) {
-    flex: 200px 0 0;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.2;
   }
 }
 
 .tabs__link:not(:last-child) {
   margin-right: 10%;
+}
+
+.tabs__link:last-child {
+  @media (max-width: $tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .tabs__link.active {

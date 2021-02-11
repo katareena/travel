@@ -54,6 +54,10 @@
   margin-bottom: 50px;
   position: relative;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.64;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -69,6 +73,10 @@
     line-height: calc(45 / 30);
     margin-bottom: 20px;
     text-align: center;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      line-height: 1.5;
+    }
 
     &::before {
       display: none;
@@ -187,6 +195,10 @@
   margin: 0;
   margin-bottom: 32px;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.23;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -201,6 +213,10 @@
     font-size: 20px;
     line-height: calc(24 / 20);
     text-align: center;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      line-height: 1.2;
+    }
 
     &::before {
       left: 80px;
@@ -218,6 +234,7 @@
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     margin-bottom: 20px;
+    line-height: 2;
   }
 
   @media (max-width: $mobile-width) {

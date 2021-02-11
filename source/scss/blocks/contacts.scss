@@ -24,6 +24,10 @@
   color: $dark-3;
   margin: 0;
   margin-bottom: 22px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.78;
+  }
 }
 
 .contacts__item {
@@ -37,6 +41,10 @@
 .contacts__item--mail {
   font-size: 14px;
   line-height: calc(17 / 14);
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.21;
+  }
 
   &::before {
     content: "";
@@ -53,6 +61,10 @@
 .contacts__item-phone {
   line-height: calc(32 / 16);
   position: relative;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 2;
+  }
 
   &::before {
     content: "";
@@ -71,7 +83,6 @@
   color: $basic;
   text-decoration-line: underline;
 }
-
 
 .contacts__mail:hover,
 .contacts__mail:focus,

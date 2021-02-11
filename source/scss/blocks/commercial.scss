@@ -4,8 +4,8 @@
   margin: 0 auto;
   margin-bottom: 200px;
 
-  background-image: url("../img/commercial-desktop@1x.jpg");
-  background-color: #8ebeeb;
+  background-image: url('../img/commercial-desktop@1x.jpg');
+  background-color: $commercial-bg;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   position: relative;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/commercial-desktop@2x.jpg");
+    background-image: url('../img/commercial-desktop@2x.jpg');
   }
 
   @media (max-width: $tablet-width) {
@@ -21,11 +21,11 @@
     max-width: 1023px;
     min-height: 344px;
     padding-top: 60px;
-    background-image: url("../img/commercial-tablet@1x.jpg");
+    background-image: url('../img/commercial-tablet@1x.jpg');
     margin-bottom: 80px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/commercial-tablet@2x.jpg");
+      background-image: url('../img/commercial-tablet@2x.jpg');
     }
   }
 
@@ -35,14 +35,14 @@
 
     min-height: 485px;
     padding-top: 81px;
-    background-image: url("../img/commercial-mobile@1x.jpg");
+    background-image: url('../img/commercial-mobile@1x.jpg');
     background-color: transparent;
     background-size: 100% 235px;
     background-position: center top;
     margin-bottom: 53px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/commercial-mobile@2x.jpg");
+      background-image: url('../img/commercial-mobile@2x.jpg');
     }
   }
 }
@@ -76,15 +76,27 @@
   letter-spacing: -1.10667px;
   color: $light-1;
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.45;
+  }
+
   @media (max-width: $tablet-width) {
     font-size: 30px;
     line-height: calc(45 / 30);
     text-align: center;
     margin-bottom: 15px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      line-height: 1.5;
+    }
   }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 102px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 294px;
+    }
   }
 }
 
@@ -95,6 +107,10 @@
   line-height: calc(27 / 16);
   letter-spacing: -0.466667px;
   color: $light-1;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.69;
+  }
 
   @media (max-width: $tablet-width) {
     text-align: center;
@@ -117,13 +133,13 @@
   @include button;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 29px;
     right: 39px;
     width: 16px;
     height: 16px;
-    background-image: url("../img/arrow.svg");
+    background-image: url('../img/arrow.svg');
     background-repeat: no-repeat;
   }
 

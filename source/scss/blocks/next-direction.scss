@@ -18,6 +18,10 @@
   color: $dark-3;
   margin: 0;
   margin-bottom: 20px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.78;
+  }
 }
 
 .next-direction__inner {
@@ -70,4 +74,8 @@
   line-height: calc(17 / 14);
   color: rgba($dark-3, 0.5);
   margin-bottom: 10px;
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    line-height: 1.21;
+  }
 }
